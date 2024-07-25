@@ -1,3 +1,5 @@
 .deps/
 build/
 .idea/
+cmake/.CMakeBuildNumber
+cmake-build-debug/

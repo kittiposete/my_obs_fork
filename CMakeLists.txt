@@ -1,9 +1,10 @@
 cmake_minimum_required(VERSION 3.22...3.25)
 
+
 if(CMAKE_HOST_SYSTEM_NAME MATCHES "(Darwin)" OR OBS_CMAKE_VERSION VERSION_GREATER_EQUAL 3.0.0)
   include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/common/bootstrap.cmake" NO_POLICY_SCOPE)
 
-  project(obs-studio VERSION ${OBS_VERSION_CANONICAL})
+  project(obs-studio VERSION ${1.0.0})
 
   if(CMAKE_HOST_SYSTEM_NAME MATCHES "(Windows)" AND CMAKE_SIZEOF_VOID_P EQUAL 4)
     include("${CMAKE_CURRENT_SOURCE_DIR}/cmake/32bit/projects.cmake")
