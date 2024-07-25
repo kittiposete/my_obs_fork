@@ -1090,7 +1090,9 @@ OBSApp::~OBSApp()
 	os_inhibit_sleep_destroy(sleepInhibitor);
 
 	if (libobs_initialized)
+        
 		obs_shutdown();
+    
 }
 
 static void move_basic_to_profiles(void)
@@ -2114,26 +2116,30 @@ static int run_program(fstream &logFile, int argc, char *argv[])
 		}
 
 		if (unclean_shutdown && !safe_mode) {
-			QMessageBox mb(QMessageBox::Warning,
-				       QTStr("AutoSafeMode.Title"),
-				       QTStr("AutoSafeMode.Text"));
-			QPushButton *launchSafeButton =
-				mb.addButton(QTStr("AutoSafeMode.LaunchSafe"),
-					     QMessageBox::AcceptRole);
-			QPushButton *launchNormalButton =
-				mb.addButton(QTStr("AutoSafeMode.LaunchNormal"),
-					     QMessageBox::RejectRole);
-			mb.setDefaultButton(launchNormalButton);
-			mb.exec();
+//			QMessageBox mb(QMessageBox::Warning,
+//				       QTStr("AutoSafeMode.Title"),
+//				       QTStr("AutoSafeMode.Text"));
+//			QPushButton *launchSafeButton =
+//				mb.addButton(QTStr("AutoSafeMode.LaunchSafe"),
+//					     QMessageBox::AcceptRole);
+//			QPushButton *launchNormalButton =
+//				mb.addButton(QTStr("AutoSafeMode.LaunchNormal"),
+//					     QMessageBox::RejectRole);
+//			mb.setDefaultButton(launchNormalButton);
+//			mb.exec();
+//
+//			safe_mode = mb.clickedButton() == launchSafeButton;
+//			if (safe_mode) {
+//				blog(LOG_INFO,
+//				     "[Safe Mode] User has launched in Safe Mode.");
+//			} else {
+//				blog(LOG_WARNING,
+//				     "[Safe Mode] User elected to launch normally.");
+//			}
 
-			safe_mode = mb.clickedButton() == launchSafeButton;
-			if (safe_mode) {
-				blog(LOG_INFO,
-				     "[Safe Mode] User has launched in Safe Mode.");
-			} else {
-				blog(LOG_WARNING,
-				     "[Safe Mode] User elected to launch normally.");
-			}
+
+            blog(LOG_WARNING,
+                 "[Safe Mode] User elected to launch normally.");
 		}
 
 		qInstallMessageHandler([](QtMsgType type,

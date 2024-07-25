@@ -102,7 +102,10 @@ target_sources(
           src/requesthandler/rpc/RequestResult.cpp
           src/requesthandler/rpc/RequestResult.h
           src/requesthandler/types/RequestBatchExecutionType.h
-          src/requesthandler/types/RequestStatus.h)
+          src/requesthandler/types/RequestStatus.h
+
+          src/requesthandler/RequestHandlerEte.cpp
+)
 
 target_sources(
   obs-websocket

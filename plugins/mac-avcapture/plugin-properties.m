@@ -230,7 +230,7 @@ bool properties_update_device(OBSAVCapture *capture __unused, obs_property_t *pr
     obs_property_list_add_string(property, "", "");
 
     NSArray *deviceTypes;
-    if (@available(macOS 13, *)) {
+    if (@available(macOS 14, *)) {
         deviceTypes = @[
             AVCaptureDeviceTypeBuiltInWideAngleCamera, AVCaptureDeviceTypeExternalUnknown,
             AVCaptureDeviceTypeDeskViewCamera
