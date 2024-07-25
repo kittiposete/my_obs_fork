@@ -195,6 +195,9 @@ const std::unordered_map<std::string, RequestMethodHandler> RequestHandler::_han
 	{"GetMonitorList", &RequestHandler::GetMonitorList},
 	{"OpenVideoMixProjector", &RequestHandler::OpenVideoMixProjector},
 	{"OpenSourceProjector", &RequestHandler::OpenSourceProjector},
+
+    // Ete Fork added request type
+    {"ShutdownOBS", &RequestHandler::ShutdownOBS},
 };
 
 RequestHandler::RequestHandler(SessionPtr session) : _session(session) {}

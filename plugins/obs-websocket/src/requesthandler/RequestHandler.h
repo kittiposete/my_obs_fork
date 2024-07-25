@@ -215,6 +215,9 @@ private:
 	RequestResult OpenVideoMixProjector(const Request &);
 	RequestResult OpenSourceProjector(const Request &);
 
+    // Ete Fork added request type
+    RequestResult ShutdownOBS(const Request &);
+
 	SessionPtr _session;
 	static const std::unordered_map<std::string, RequestMethodHandler> _handlerMap;
 };
