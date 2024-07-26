@@ -6,6 +6,5 @@ cmake-build-debug/
 build_macos/
 build_x64/
 build_x86/
-cmake-build-macos-arm/
 build_macos_arm64/
 build_macos_intel/
