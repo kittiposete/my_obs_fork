@@ -4,3 +4,5 @@ build/
 cmake/.CMakeBuildNumber
 cmake-build-debug/
 build_macos/
+build_x64/
+build_x86/
