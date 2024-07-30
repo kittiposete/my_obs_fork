@@ -2774,6 +2774,10 @@ EXPORT void obs_source_frame_copy(struct obs_source_frame *dst,
 /* Get source icon type */
 EXPORT enum obs_icon_type obs_source_get_icon_type(const char *id);
 
+EXPORT void close_obs(void);
+
+EXPORT void get_on_websocket_want_to_close_obs(void (*webSocketWantToCloseObs)(void));
+
 #ifdef __cplusplus
 }
 #endif
