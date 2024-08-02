@@ -298,6 +298,7 @@ static bool virtualcam_output_start(void *data)
 
         SystemExtensionActivationDelegate *delegate = vcam->extensionDelegate;
 
+        // if the extension is not installed, the delegate will handle the installation
         if (!delegate.installed) {
             if (delegate.lastErrorMessage) {
                 obs_output_set_last_error(
